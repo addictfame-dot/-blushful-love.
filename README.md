@@ -1,28 +1,22 @@
-# Blushful Love — Website / PWA
+# Blushful Love — Romantic Book Studio (visual redesign)
 
-A mobile and desktop responsive romantic book editor.
-
-## Publish on GitHub Pages (phone-friendly)
-1. Create/open your `blushful-love` repository.
-2. Upload **the contents of this `blushful-love` folder** into the repository root (index.html, src/, icons, manifest, etc.).
-3. Go to Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)` → Save.
-4. Wait for the Pages deployment, then visit `https://YOUR_USERNAME.github.io/blushful-love/`.
-5. On Android Chrome use menu → Add to Home screen / Install app. On desktop Chrome/Edge use Install app if offered.
-
-## Local preview
-Serve this folder with a static HTTP server, for example `python -m http.server 8000`, then open `http://localhost:8000`. Opening index.html directly may prevent service worker and update checks.
+A static GitHub Pages-ready project. Upload **the contents of this ZIP** to the root of your `blushful-love` repository and enable Settings → Pages → Deploy from branch → main / root.
 
 ## Included
-- Cover title, color, custom cover image, theme and page color
-- Two-page editing, formatting buttons, contents navigation, basic animated flip
-- Image upload/clipboard paste, dragging, width/brightness/rotation sliders
-- Local browser storage, JSON import/export, installable PWA shell
-- Manual version check against version.json
+- Preview-inspired burgundy, blush, gold desktop layout and responsive mobile UI
+- Editable page text, formatting controls, table of contents and page navigation
+- Cover/title/theme/page color changes and custom cover upload
+- Photo upload and clipboard paste, drag, width, brightness and rotation
+- Local device storage, JSON export/import, basic page flip, PWA manifest
 
-## Important limitations
-- Book is CSS-perspective 2.5D, **not** physically simulated photorealistic Three.js geometry.
-- Spellcheck depends on browser; grammar AI and synonyms API are **not implemented**.
-- The version checker is manual and compares version.json to 1.0.0; no push notifications or automatic GitHub release installer.
-- LocalStorage is per browser/device; no cloud synchronization. Photos stored as base64 can fill browser quota. Export JSON backups regularly.
-- HTML editing uses browser execCommand (legacy) and should be replaced with a rich text editor for production.
-- Uploaded JSON is not sanitized; import only files you trust.
+## Honest limitations
+This is an upgraded visual implementation, **not** a photorealistic Three.js 3D engine. Page turns are CSS-based; advanced grammar corrections, synonyms, photo cropping and cloud sync are not implemented. Spellcheck is browser-provided. Google Fonts require an internet connection; fallback fonts work offline. Personal photos saved in browser storage may exceed storage limits; export backups regularly. Do not upload private photos or letters to a public GitHub repository.
+
+## Deploy
+1. Extract ZIP and upload its contents (not the enclosing folder) to GitHub repo root.
+2. Confirm `index.html`, `src/`, `manifest.webmanifest` are at root.
+3. Settings → Pages → main → / (root).
+4. Wait for deployment and hard-refresh website; existing service worker may cache an older version.
+
+## Testing
+Static source checked; interactive browser tests and cross-device tests not performed.
